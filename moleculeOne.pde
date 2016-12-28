@@ -102,7 +102,7 @@ void SLimoneneDraw() {
   l6.display();
 }
 
-//////////////////
+/////////////////////////////////////////////////////////////////////////////////////
 
 void RLimoneneSetup(){ 
   float angle = PI/3;
@@ -208,15 +208,242 @@ void RLimoneneDraw() {
   l6.display();
 }
 
+////////////////////////////////////////////////////////////////////////////////////
+
+void RCarvoneSetup(){ 
+  float angle = PI/3;
+  float len = 100;
+  l1 = new Line(100,0,0);
+  l1.v.setMag(len);
+  l12 = new Line(l1.v);
+  l12.rotateAtAround(-2*PI/3,new PVector(0,0,100));
+  l12.v.setMag(len);
+  l2 = new Line(l1.v);
+  l2.rotateAtAround(angle,l1.v.cross(new PVector(0,100,0)));
+  l2.v.setMag(len);
+  l7 = new Line(l2.v);
+  l7.rotateAtAround(-2*PI/3,new PVector(0,0,100));
+  l7.v.setMag(len);
+  l3 = new Line(l2.v);
+  l3.rotateAtAround(angle,l1.v.cross(l2.v));
+  l3.v.setMag(len);
+  l4 = new Line(l3.v);
+  l4.rotateAtAround(angle,l2.v.cross(l3.v));
+  l4.v.setMag(len);
+  l5 = new Line(l4.v);
+  l5.rotateAtAround(angle,l3.v.cross(l4.v));
+  l5.v.setMag(len);
+  l8 = new Line(l5.v);
+  l8.rotateAtAround(radians(135),new PVector(100,0,0));
+  l8.v.setMag(len);
+  l10 = new Line(l8.v);
+  l10.rotateAtAround(radians(135-90),new PVector(0,0,100));
+  l10.v.setMag(len);
+  l11 = new Line(l8.v);
+  l11.rotateAtAround(radians(-135+90),new PVector(0,0,100));
+  l11.v.setMag(len);
+  l9 = new Line(l5.v);
+  l9.rotateAtAround(radians(-135),new PVector(100,0,0));
+  l9.v.setMag(len);
+  l6 = new Line(l5.v);
+  l6.rotateAtAround(angle,l4.v.cross(l5.v));
+  l6.v.setMag(len);
+}
+
+void RCarvoneDraw() {
+  fill(50);
+  float o=3;
+  stroke(0);
+  sphere();
+  l1.display();
+  pushMatrix();
+  translate(-o,o,0);
+  l12.display();
+  translate(2*o,-2*o,0);
+  l12.display();
+  translate(l12.v);
+  sphere(25,color(255,0,0));
+  popMatrix();
+  translate(l1.v);
+  sphere();
+  l7.display();
+  pushMatrix();
+  translate(l7.v);
+  sphere();
+  popMatrix();
+  pushMatrix();
+  translate(-o,o,0);
+  l2.display();
+  translate(2*o,-2*o,0);
+  l2.display();
+  popMatrix();
+  
+  translate(l2.v);
+  sphere();
+  l3.display();
+  
+  translate(l3.v);
+  sphere();
+  l4.display();
+  
+  translate(l4.v);
+  sphere(25,color(255,0,0));
+  l5.display();
+  l8.display();
+  pushMatrix();
+  translate(l8.v);
+  sphere(25,color(255,0,255));
+  l10.display();
+  pushMatrix();
+  translate(l10.v);
+  sphere(25,color(255,255,0));
+  popMatrix();
+  pushMatrix();
+  translate(-o,o,0);
+  l11.display();
+  translate(2*o,-2*o,0);
+  l11.display();
+  translate(l11.v);
+  sphere(25,color(0,255,255));
+  popMatrix();
+  popMatrix();
+  l9.display();
+  pushMatrix();
+  translate(l9.v);
+  sphere(10,color(225));
+  popMatrix();
+  
+  translate(l5.v);
+  sphere();
+  l6.display();
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+void SCarvoneSetup(){ 
+  float angle = PI/3;
+  float len = 100;
+  l1 = new Line(100,0,0);
+  l1.v.setMag(len);
+  l2 = new Line(l1.v);
+  l2.rotateAtAround(angle,l1.v.cross(new PVector(0,100,0)));
+  l2.v.setMag(len);
+  l7 = new Line(l2.v);
+  l7.rotateAtAround(-2*PI/3,new PVector(0,0,100));
+  l7.v.setMag(len);
+  l3 = new Line(l2.v);
+  l3.rotateAtAround(angle,l1.v.cross(l2.v));
+  l3.v.setMag(len);
+  l12 = new Line(l3.v);
+  l12.rotateAtAround(-2*PI/3,l1.v.cross(l2.v));
+  l12.v.setMag(len);
+  l4 = new Line(l3.v);
+  l4.rotateAtAround(angle,l2.v.cross(l3.v));
+  l4.v.setMag(len);
+  l5 = new Line(l4.v);
+  l5.rotateAtAround(angle,l3.v.cross(l4.v));
+  l5.v.setMag(len);
+  l8 = new Line(l5.v);
+  l8.rotateAtAround(radians(135),new PVector(100,0,0));
+  l8.v.setMag(len);
+  l10 = new Line(l8.v);
+  l10.rotateAtAround(radians(135-90),new PVector(0,0,100));
+  l10.v.setMag(len);
+  l11 = new Line(l8.v);
+  l11.rotateAtAround(radians(-135+90),new PVector(0,0,100));
+  l11.v.setMag(len);
+  l9 = new Line(l5.v);
+  l9.rotateAtAround(radians(-135),new PVector(100,0,0));
+  l9.v.setMag(len);
+  l6 = new Line(l5.v);
+  l6.rotateAtAround(angle,l4.v.cross(l5.v));
+  l6.v.setMag(len);
+}
+
+void SCarvoneDraw() {
+  fill(50);
+  float o=3;
+  stroke(0);
+  sphere();
+  pushMatrix();
+  translate(-o,o,0);
+  l1.display();
+  translate(2*o,-2*o,0);
+  l1.display();
+  popMatrix();
+  
+  translate(l1.v);
+  sphere();
+  l7.display();
+  pushMatrix();
+  translate(l7.v);
+  sphere();
+  popMatrix();
+  l2.display();
+  
+  translate(l2.v);
+  sphere();
+  l3.display();
+  pushMatrix();
+  translate(-o,o,0);
+  l12.display();
+  translate(2*o,-2*o,0);
+  l12.display();
+  translate(l12.v);
+  sphere(25,color(255,0,0));
+  popMatrix();
+  
+  translate(l3.v);
+  sphere();
+  l4.display();
+  
+  translate(l4.v);
+  sphere(25,color(255,0,0));
+  l5.display();
+  l8.display();
+  pushMatrix();
+  translate(l8.v);
+  sphere(25,color(255,0,255));
+  
+  pushMatrix();
+  translate(-o,o,0);
+  l10.display();
+  translate(2*o,-2*o,0);
+  l10.display();
+  popMatrix();
+  
+  pushMatrix();
+  translate(l10.v);
+  sphere(25,color(0,255,255));
+  popMatrix();
+  
+  pushMatrix();
+  l11.display();
+  translate(l11.v);
+  sphere(25,color(255,255,0));
+  popMatrix();
+  
+  popMatrix();
+  l9.display();
+  pushMatrix();
+  translate(l9.v);
+  sphere(10,color(225));
+  popMatrix();
+  
+  translate(l5.v);
+  sphere();
+  l6.display();
+}
+
 void setup() {
   size(500,800,P3D);
-  RLimoneneSetup();
+  SLimoneneSetup();
 }
 
 void draw() {
-  standardDraw("R-Limonene");
+  standardDraw("S-Limonene");
   
-  RLimoneneDraw();
+  SLimoneneDraw();
 }
 
 void sphere() {
