@@ -46,6 +46,7 @@ void SLimoneneDraw() {
   float o=3;
   stroke(0);
   sphere();
+  stroke(0,255,255);
   l1.display();
   
   translate(l1.v);
@@ -57,6 +58,7 @@ void SLimoneneDraw() {
   popMatrix();
   pushMatrix();
   translate(-o,o,0);
+  stroke(255,255,0);
   l2.display();
   translate(2*o,-2*o,0);
   l2.display();
@@ -64,33 +66,40 @@ void SLimoneneDraw() {
   
   translate(l2.v);
   sphere();
+  stroke(255,255,0);
   l3.display();
   
   translate(l3.v);
   sphere();
+  stroke(255,255,0);
   l4.display();
   
   translate(l4.v);
-  sphere(25,color(255,0,0));
+  sphere(25,color(255,255/2,0));
+  stroke(0,255,255);
   l5.display();
+  stroke(255,0,255);
   l8.display();
   pushMatrix();
   translate(l8.v);
-  sphere(25,color(255,0,255));
+  sphere();
+  stroke(255,0,255);
   l10.display();
   pushMatrix();
   translate(l10.v);
-  sphere(25,color(255,255,0));
+  sphere(25,color(0,255,255));
   popMatrix();
   pushMatrix();
   translate(-o,o,0);
+  stroke(255,0,255);
   l11.display();
   translate(2*o,-2*o,0);
   l11.display();
   translate(l11.v);
-  sphere(25,color(0,255,255));
+  sphere(25,color(255,255,0));
   popMatrix();
   popMatrix();
+  stroke(175,175,175);
   l9.display();
   pushMatrix();
   translate(l9.v);
@@ -99,6 +108,7 @@ void SLimoneneDraw() {
   
   translate(l5.v);
   sphere();
+  stroke(0,255,255);
   l6.display();
 }
 
@@ -147,6 +157,7 @@ void RLimoneneDraw() {
   stroke(0);
   sphere();
   pushMatrix();
+  stroke(255,255,0);
   translate(-o,o,0);
   l1.display();
   translate(2*o,-2*o,0);
@@ -160,25 +171,31 @@ void RLimoneneDraw() {
   translate(l7.v);
   sphere();
   popMatrix();
+  stroke(0,255,255);
   l2.display();
   
   translate(l2.v);
   sphere();
+  stroke(0,255,255);
   l3.display();
   
   translate(l3.v);
   sphere();
+  stroke(0,255,255);
   l4.display();
   
   translate(l4.v);
-  sphere(25,color(255,0,0));
+  sphere(25,color(255,255/2,0));
+  stroke(255,255,0);
   l5.display();
+  stroke(255,0,255);
   l8.display();
   pushMatrix();
   translate(l8.v);
-  sphere(25,color(255,0,255));
+  sphere(25,color(0));
   
   pushMatrix();
+  stroke(255,0,255);
   translate(-o,o,0);
   l10.display();
   translate(2*o,-2*o,0);
@@ -187,16 +204,18 @@ void RLimoneneDraw() {
   
   pushMatrix();
   translate(l10.v);
-  sphere(25,color(0,255,255));
-  popMatrix();
-  
-  pushMatrix();
-  l11.display();
-  translate(l11.v);
   sphere(25,color(255,255,0));
   popMatrix();
   
+  pushMatrix();
+  stroke(255,0,255);
+  l11.display();
+  translate(l11.v);
+  sphere(25,color(0,255,255));
   popMatrix();
+  
+  popMatrix();
+  stroke(175);
   l9.display();
   pushMatrix();
   translate(l9.v);
@@ -205,6 +224,7 @@ void RLimoneneDraw() {
   
   translate(l5.v);
   sphere();
+  stroke(255,255,0);
   l6.display();
 }
 
@@ -255,9 +275,11 @@ void RCarvoneDraw() {
   float o=3;
   stroke(0);
   sphere();
+  stroke(0,255,255);
   l1.display();
   pushMatrix();
   translate(-o,o,0);
+  stroke(0,255,255);
   l12.display();
   translate(2*o,-2*o,0);
   l12.display();
@@ -273,6 +295,7 @@ void RCarvoneDraw() {
   popMatrix();
   pushMatrix();
   translate(-o,o,0);
+  stroke(255,255,0);
   l2.display();
   translate(2*o,-2*o,0);
   l2.display();
@@ -280,33 +303,40 @@ void RCarvoneDraw() {
   
   translate(l2.v);
   sphere();
+  stroke(255,255,0);
   l3.display();
   
   translate(l3.v);
   sphere();
+  stroke(255,255,0);
   l4.display();
   
   translate(l4.v);
-  sphere(25,color(255,0,0));
+  sphere(25,color(255,255/2,0));
+  stroke(0,255,255);
   l5.display();
+  stroke(255,0,255);
   l8.display();
   pushMatrix();
   translate(l8.v);
-  sphere(25,color(255,0,255));
+  sphere();
+  stroke(255,0,255);
   l10.display();
   pushMatrix();
   translate(l10.v);
-  sphere(25,color(255,255,0));
+  sphere(25,color(0,255,255));
   popMatrix();
   pushMatrix();
   translate(-o,o,0);
+  stroke(255,0,255);
   l11.display();
   translate(2*o,-2*o,0);
   l11.display();
   translate(l11.v);
-  sphere(25,color(0,255,255));
+  sphere(25,color(255,255,0));
   popMatrix();
   popMatrix();
+  stroke(175);
   l9.display();
   pushMatrix();
   translate(l9.v);
@@ -315,6 +345,7 @@ void RCarvoneDraw() {
   
   translate(l5.v);
   sphere();
+  stroke(0,255,255);
   l6.display();
 }
 
@@ -367,6 +398,7 @@ void SCarvoneDraw() {
   sphere();
   pushMatrix();
   translate(-o,o,0);
+  stroke(255,255,0);
   l1.display();
   translate(2*o,-2*o,0);
   l1.display();
@@ -379,13 +411,16 @@ void SCarvoneDraw() {
   translate(l7.v);
   sphere();
   popMatrix();
+  stroke(0,255,255);
   l2.display();
   
   translate(l2.v);
   sphere();
+  stroke(0,255,255);
   l3.display();
   pushMatrix();
   translate(-o,o,0);
+  stroke(0,255,255);
   l12.display();
   translate(2*o,-2*o,0);
   l12.display();
@@ -395,18 +430,22 @@ void SCarvoneDraw() {
   
   translate(l3.v);
   sphere();
+  stroke(0,255,255);
   l4.display();
   
   translate(l4.v);
-  sphere(25,color(255,0,0));
+  sphere(25,color(255,255/2,0));
+  stroke(255,255,0);
   l5.display();
+  stroke(255,0,255);
   l8.display();
   pushMatrix();
   translate(l8.v);
-  sphere(25,color(255,0,255));
+  sphere();
   
   pushMatrix();
   translate(-o,o,0);
+  stroke(255,0,255);
   l10.display();
   translate(2*o,-2*o,0);
   l10.display();
@@ -414,16 +453,18 @@ void SCarvoneDraw() {
   
   pushMatrix();
   translate(l10.v);
-  sphere(25,color(0,255,255));
-  popMatrix();
-  
-  pushMatrix();
-  l11.display();
-  translate(l11.v);
   sphere(25,color(255,255,0));
   popMatrix();
   
+  pushMatrix();
+  stroke(255,0,255);
+  l11.display();
+  translate(l11.v);
+  sphere(25,color(0,255,255));
   popMatrix();
+  
+  popMatrix();
+  stroke(175);
   l9.display();
   pushMatrix();
   translate(l9.v);
@@ -432,18 +473,19 @@ void SCarvoneDraw() {
   
   translate(l5.v);
   sphere();
+  stroke(255,255,0);
   l6.display();
 }
 
 void setup() {
   size(500,800,P3D);
-  SLimoneneSetup();
+  SCarvoneSetup();
 }
 
 void draw() {
-  standardDraw("S-Limonene");
+  standardDraw("S-Carvone");
   
-  SLimoneneDraw();
+  SCarvoneDraw();
 }
 
 void sphere() {
@@ -465,7 +507,7 @@ void translate(PVector p) {
   translate(p.x,p.y,p.z);
 }
 void standardDraw(String moleculeName) {
-  background(230,230,200);
+  background(182,173,242);
   directionalLight(146,146,146,0,0,-1);
   ambientLight(122, 122, 122);
   
