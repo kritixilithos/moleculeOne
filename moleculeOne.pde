@@ -495,15 +495,17 @@ void SCarvoneDraw() {
   l6.display();
 }
 
+//HERE
+
 void setup() {
   size(500, 800, P3D);
-  SCarvoneSetup();
+  RCarvoneSetup();
 }
 
 void draw() {
-  standardDraw("S-Carvone");
+  standardDraw("R-Carvone");
 
-  SCarvoneDraw();
+  RCarvoneDraw();
 }
 
 void sphere() {
@@ -573,6 +575,10 @@ color chooseColor(color c) {
 }
 
 void keyTyped() {
+	if (key == '.') {
+		save("R-carvone.png");
+		exit();
+	}
   if(key=='y'||key=='c'||key=='p'||key=='g'){
     lastColourKey = key;
   }
